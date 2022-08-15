@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: passgen-cert
+spec:
+  secretName: passgen-cert
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: passgen.site
+  dnsNames:
+  - passgen.site
